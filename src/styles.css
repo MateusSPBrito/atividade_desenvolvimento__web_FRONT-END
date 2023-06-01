@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+:root {
+    --blue01: #024059;
+    --blue02: #06AFF2;
+    --blue03: #9BE3F2;
+    --blue04: blue;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: helvetica,sans-serif;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	max-width: 100vw;
+	min-height: 100%;
+}
+
+.container {
+    width: 100vw;
+    min-height: 100%;
+    display: flex;
+}

@@ -1,0 +1,23 @@
+<div class="container">
+    <div id="login">
+
+        <div id="circle-logo"></div>
+
+        <h1>Login</h1>
+
+        <div class="input-container">
+            <input type="email" id="email" name="email" required placeholder="Informe seu email">
+            <label for="email">Email</label>
+        </div>
+
+        <div class="input-container">
+            <input type="password" id="password" name="password" required placeholder="Informe sua senha">
+            <label for="password">Senha</label>
+            <i (click)="showPassword()" class="bi bi-eye-fill icon-password"></i>
+        </div>
+
+        <label id="label-check"><input id="box" type="checkbox" name="checkbox"><span>Lembrar de mim</span></label>
+
+        <button class="send">Entrar</button>
+    </div>
+</div>

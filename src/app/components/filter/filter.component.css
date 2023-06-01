@@ -1,0 +1,167 @@
+#filter-container {
+    width: 100vw;
+    padding: 30px 0;
+    background: var(--blue03);
+    overflow-y: auto;
+}
+
+#filter {
+    width: 75%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 3% 30px;
+    gap: 40px;
+}
+
+#filter .content-1 {
+    display: flex;
+    width: 100%;
+    gap: 40px;
+    align-items: center;
+}
+
+#filter .content-1 .op {
+    display: flex;
+    gap: 20px;
+}
+
+#filter .content-1 .op div {
+    padding: 5px 15px;
+    color: var(--blue01);
+    border-radius: 20px;
+    /* font-weight: bold; */
+    border: solid 3px var(--blue01);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+#filter .content-1 .op div:hover {
+    transform: scale(1.06);
+}
+
+.active {
+    background-color: var(--blue01) !important;
+    color: #fff !important;
+}
+
+#filter .content-2 {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input {
+    height: 45px;
+    outline: none;
+    border: solid 2px #dfdfdf;
+    border-radius: 5px;
+    padding-left: 35px;
+    margin-top: 5px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.geo {
+    width: 27%;
+}
+
+.data {
+    width: 15%;
+}
+
+.input-container input:focus {
+    border-color: var(--blue01);
+}
+
+.input-container input:focus+i {
+    color: var(--blue01);
+}
+
+.input-container i {
+    position: absolute;
+    font-size: 20px;
+    left: 10px;
+    bottom: 10px;
+    color: #999;
+}
+
+.input-container input[type="date"] {
+    padding: 0 10px;
+}
+
+button {
+    height: 45px;
+    font-size: 20px;
+    background-color: #FF0000;
+    outline: none;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1000px) {
+    .content-2 {
+        flex-wrap: wrap;
+        gap: 20px 0;
+    }
+
+    .geo {
+        width: 47%;
+    }
+
+    .data, button {
+        width: 30%;
+    }
+}
+
+@media (max-width: 780px){
+    h1{
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 710px){
+    #filter{
+        gap: 20px 0;
+    }
+
+    .content-1{
+        flex-wrap: wrap;
+        gap: 10px 0 !important;
+    }
+
+    .op{
+        width: 100%;
+        justify-content: center;
+    }
+
+    h1{
+        margin: 0 auto;  
+    }
+}
+
+@media (max-width: 590px) {
+    .input-container, button{
+        width: 100%;
+    }
+
+    #filter-container{
+        width: 100%;
+    }
+
+    #filter{
+        width: 90%;
+    }
+}
