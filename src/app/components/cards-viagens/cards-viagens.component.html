@@ -1,0 +1,18 @@
+<div *ngFor="let i of [1,2,3,4]; index as index" class="card-viagem"
+    [ngClass]="{'first': index == 0, 'last': index == [1,2,3,4].length - 1}">
+    <img src="../../../assets/companhias aéreas/gol_correto.png" alt="">
+    <div class="info">
+        <div class="ida">
+            <p>Santos Dumont</p>
+            <p>30/02/2018</p>
+        </div>
+
+        <i class="bi bi-arrow-right"></i>
+
+        <div class="volta">
+            <p>Guarulhos</p>
+            <p>12/12/2012</p>
+        </div>
+    </div>
+    <button>Comprar</button>
+</div>

@@ -1,0 +1,103 @@
+.card-viagem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5%;
+    background-color: #fff;
+    border: solid 1px #dfdfdf;
+    border-top-width: 0;
+    flex-wrap: wrap;
+}
+
+.first{
+    border-radius: 10px 10px 0 0;
+    border-top-width: 1px;
+}
+
+.last{
+    border-radius: 0 0 10px 10px;
+}
+
+.card-viagem img{
+    width: 60px;
+}
+
+.card-viagem button{
+    width: 15%;
+    padding: 10px;
+}
+
+.card-viagem .info{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #5a5a5a;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-viagem i{
+    font-size: 30px;
+}
+
+button{
+    background-color: red;
+    border:none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+button:hover{
+    background-color: #D00000;
+}
+
+@media (max-width: 800px) {
+    button{
+        display: none;
+    }
+
+    .card-viagem{
+        padding: 2.5% 10%;
+    }
+}
+
+@media (max-width: 600px){
+    .card-viagem .info{
+        gap: 10px;
+        font-size: 16px;
+    }
+
+    .card-viagem i{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-viagem{
+        padding: 2.5%;
+    }
+    
+    .card-viagem img{
+        width: 10vw;
+    }
+
+    .card-viagem .info{
+        max-width: 80vw;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 350px) {
+    .card-viagem .info{
+        font-size: 14px;
+    }
+}

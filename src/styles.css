@@ -21,10 +21,17 @@ body {
 	width: 100%;
 	max-width: 100vw;
 	min-height: 100%;
+    overflow-x: hidden;
+    background-color: #F8F6F7;
 }
 
 .container {
     width: 100vw;
     min-height: 100%;
     display: flex;
+}
+
+button{
+    cursor: pointer;
+    outline: none;
 }

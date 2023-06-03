@@ -7,6 +7,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FilterComponent } from './components/filter/filter.component';
+import { CardsViagensComponent } from './components/cards-viagens/cards-viagens.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FilterComponent } from './components/filter/filter.component';
     LoginComponent,
     HomeComponent,
     HeaderComponent,
-    FilterComponent
+    FilterComponent,
+    CardsViagensComponent,
   ],
   imports: [
     BrowserModule,
