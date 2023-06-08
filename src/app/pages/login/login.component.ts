@@ -6,8 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
-
   showPassword() {
     const input: any = document.getElementById('password')
     const icon: any = document.querySelector('.icon-password')
@@ -15,9 +13,14 @@ export class LoginComponent {
       input.type = 'text'
       icon.setAttribute('class', 'bi bi-eye-slash-fill icon-password')
     }
-    else{
+    else {
       input.type = 'password'
       icon.setAttribute('class', 'bi bi-eye-fill icon-password')
     }
   }
+
+  login(){
+    window.location.href = `/home`
+  }
+
 }

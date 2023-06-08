@@ -29,11 +29,18 @@
 
 .card-viagem .info{
     display: flex;
-    flex-direction: row;
-    gap: 20px;
+    flex-direction: column;
     text-align: center;
     font-weight: bold;
     color: #5a5a5a;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-viagem .info div{
+    display: flex;
+    gap: 20px;
     justify-content: center;
     align-items: center;
 }

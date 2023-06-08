@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cards-viagens',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./cards-viagens.component.css']
 })
 export class CardsViagensComponent {
-
+  @Input() voos: any[] = []
 }

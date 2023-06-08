@@ -1,18 +1,16 @@
 .container {
     align-items: center;
     justify-content: center;
-    /* background-color: var(--blue02); */
 }
 
 #login {
     width: 100vw;
     max-width: 400px;
-    /* height: 500px; */
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 4px 35px -4px rgba(0, 0, 0, 0.18);
     border-radius: 0.8rem;
     flex-direction: column;
 }
@@ -22,22 +20,26 @@
     height: 20vw;
     max-width: 100px;
     max-height: 100px;
-    border: 10px solid var(--blue04);
+    border: 4px solid red;
     border-radius: 50%;
-    /* position: relative; */
     transform: translate(0, -40%);
     background-color: #fff;
     transition: all 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 4px 35px -4px rgba(0, 0, 0, 0.18);
 }
 
-#circle-logo:hover{
-    background-color: var(--blue01);
+#circle-logo img{
+    width: 100%;
+    transform: translate(7.5%, -10%);
 }
 
 h1{
     margin-bottom: 50px;
     font-weight: bold;
-    color: var(--blue04);
+    color: var(--blue01);
 }
 
 .input-container {
@@ -52,16 +54,11 @@ input {
     outline: none;
     width: 100%;
     height: 100%;
-    /* padding: 0 50px 0 .8rem; */
     padding: 0 20px;
-    border: 3px solid var(--blue02);
+    border: 2px solid var(--blue01);
     background: #fff;
     border-radius: 5px;
     transition: all 0.2s;
-}
-
-input:focus {
-    border: 3px solid var(--blue04);
 }
 
 input::placeholder {
@@ -78,15 +75,22 @@ input:focus::placeholder {
     position: absolute;
     left: 12px;
     top: 14px;
-    background-color: #fff;
     padding: 0 10px;
     transition: all 0.1s;
-    color: var(--blue02);
+    color: var(--blue01);
     font-weight: bold;
+    z-index: 1;
 }
 
-input:focus+label {
-    color: var(--blue04);
+.input-container label::after{
+    content: '';
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    z-index: -1;
 }
 
 input:focus+label,
@@ -107,7 +111,7 @@ input[type=password] {
     bottom: 0;
     transform: translate(0, -25%);
     cursor: pointer;
-    color: var(--blue02);
+    color: var(--blue01);
 }
 
 #label-check {
@@ -132,7 +136,7 @@ input[type=password] {
     width: 18px;
     height: 18px;
     border-radius: 4px;
-    border: 3px solid var(--blue02);
+    border: 3px solid var(--blue01);
     display: inline-block;
     vertical-align: middle;
     margin-right: 10px;
@@ -140,7 +144,7 @@ input[type=password] {
 }
 
 #box:checked+:before {
-    background-color: var(--blue02);
+    background-color: var(--blue01);
     content: '✓';
     color: #fff;
     display: inline-flex;
@@ -154,8 +158,8 @@ input[type=password] {
     width: 90%;
     max-width: 300px;
     border-radius: 100px;
-    border: 7px solid var(--blue04);
-    background-color: var(--blue04);
+    border: none;
+    background-color: var(--blue01);
     padding: 8px 0;
     transition: all 0.3s;
     font-size: 20px;
@@ -164,17 +168,14 @@ input[type=password] {
 }
 
 .send:hover{
-    background-color: transparent;
-    border-color: var(--blue01);
-    color: var(--blue01);
-    letter-spacing: 3px;
+    background-color: red;
 }
 
 @media(max-width: 450px){
     #login{
         box-shadow: none;
         height: 100%;
-        background-color: #fff;
+        background-color: #F8F6F7;
     }
     .input-container{
         max-width: none;

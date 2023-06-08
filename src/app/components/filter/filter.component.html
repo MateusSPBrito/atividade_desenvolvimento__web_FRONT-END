@@ -3,31 +3,31 @@
         <div class="content-1">
             <h1>Passagens Aéreas</h1>
             <div class="op">
-                <div class="active">Só Ida</div>
-                <div>Ida e Volta</div>
+                <div [ngClass]="{'active': !goAndBack}" (click)="setGoAndBack()">Só Ida</div>
+                <div [ngClass]="{'active': goAndBack}" (click)="setGoAndBack()">Ida e Volta</div>
             </div>
         </div>
 
         <div class="content-2">
             <div class="input-container geo">
                 <p>Saida:</p>
-                <input type="text">
+                <input type="text" [(ngModel)]="filter.start" >
                 <i class="bi bi-geo-alt"></i>
             </div>
             <div class="input-container geo">
                 <p>Chegada:</p>
-                <input type="text">
+                <input type="text" [(ngModel)]="filter.destiny">
                 <i class="bi bi-flag"></i>
             </div>
             <div class="input-container data">
                 <p>Data da Ida:</p>
-                <input type="date">
+                <input type="date" [(ngModel)]="filter.goDate">
             </div>
-            <div class="input-container data">
+            <div class="input-container data" [ngClass]="{'none': !goAndBack}">
                 <p>Data da Volta:</p>
-                <input type="date">
+                <input type="date" [(ngModel)]="filter.backDate">
             </div>
-            <button>Buscar</button>
+            <button (click)="getViagens()">Buscar</button>
         </div>
     </div>
 </div>

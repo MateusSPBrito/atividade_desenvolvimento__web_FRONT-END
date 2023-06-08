@@ -49,7 +49,8 @@
 #filter .content-2 {
     display: flex;
     align-items: flex-end;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
     width: 100%;
 }
 
@@ -111,8 +112,12 @@ button {
     transition: all 0.3s;
 }
 
-button:hover{
+button:hover {
     background-color: #D00000;
+}
+
+.none {
+    display: none;
 }
 
 @media (max-width: 1000px) {
@@ -125,47 +130,50 @@ button:hover{
         width: 47%;
     }
 
-    .data, button {
+    .data,
+    button {
         width: 30%;
     }
 }
 
-@media (max-width: 780px){
-    h1{
+@media (max-width: 780px) {
+    h1 {
         font-size: 27px;
     }
 }
 
-@media (max-width: 710px){
-    #filter{
+@media (max-width: 710px) {
+    #filter {
         gap: 20px 0;
     }
 
-    .content-1{
+    .content-1 {
         flex-wrap: wrap;
         gap: 10px 0 !important;
     }
 
-    .op{
+    .op {
         width: 100%;
         justify-content: center;
     }
 
-    h1{
-        margin: 0 auto;  
+    h1 {
+        margin: 0 auto;
     }
 }
 
 @media (max-width: 590px) {
-    .input-container, button{
+
+    .input-container,
+    button {
         width: 100%;
     }
 
-    #filter-container{
+    #filter-container {
         width: 100%;
     }
 
-    #filter{
+    #filter {
         width: 90%;
     }
 }
