@@ -10,6 +10,7 @@ import { FilterComponent } from './components/filter/filter.component';
 import { CardsViagensComponent } from './components/cards-viagens/cards-viagens.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { CardUserViagensComponent } from './components/card-user-viagens/card-user-viagens.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FilterComponent,
     CardsViagensComponent,
+    CardUserViagensComponent,
   ],
   imports: [
     BrowserModule,

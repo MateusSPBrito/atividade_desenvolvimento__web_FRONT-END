@@ -9,6 +9,11 @@ import Filter from 'src/app/components/filter/model';
 export class HomeComponent {
   voos: any = []
   filter = new Filter
+  page = 'voos'
+
+  setPage(page: any) {
+    this.page = page
+  }
 
   setVoos(obj: any) {
     this.voos = obj.voos

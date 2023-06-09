@@ -1,5 +1,5 @@
 <div *ngFor="let voo of voos; index as index" class="card-viagem"
-    [ngClass]="{'first': index == 0, 'last': index == [1,2,3,4].length - 1}">
+    [ngClass]="{'first': index == 0, 'last': index == voos.length - 1}">
     <img src="../../../assets/companhias aéreas/{{voo.airline}}.png" alt="">
     <div class="info">
         <div>

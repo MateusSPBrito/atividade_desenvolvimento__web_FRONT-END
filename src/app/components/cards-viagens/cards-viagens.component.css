@@ -6,7 +6,7 @@
     background-color: #fff;
     border: solid 1px #dfdfdf;
     border-top-width: 0;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .first{

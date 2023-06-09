@@ -1,14 +1,24 @@
 <div class="container">
-    <app-header></app-header>
-    <app-filter (setVoos)="setVoos($event)"></app-filter>
-    <div class="lista-viagens">
-        <p>Ida:</p>
-        <app-cards-viagens [voos]="divideVoos()"></app-cards-viagens>
+    <app-header (setPages)="setPage($event)" [page]="page"></app-header>
+
+    <div id="voos" *ngIf="page == 'voos'">
+        <app-filter (setVoos)="setVoos($event)"></app-filter>
+        <div class="lista-viagens">
+            <p>Ida:</p>
+            <app-cards-viagens [voos]="divideVoos()"></app-cards-viagens>
+        </div>
+
+        <div class="lista-viagens">
+            <p>Volta:</p>
+            <app-cards-viagens [voos]="divideVoos(false)"></app-cards-viagens>
+        </div>
     </div>
 
-    <div class="lista-viagens">
-        <p>Volta:</p>
-        <app-cards-viagens [voos]="divideVoos(false)"></app-cards-viagens>
+    <div id="user-voos" *ngIf="page == 'userVoos'">
+        <div class="lista-viagens">
+            <p>Minhas viagens:</p>
+            <app-card-user-viagens ></app-card-user-viagens>
+        </div>
     </div>
-    
+
 </div>

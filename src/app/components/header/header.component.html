@@ -1,15 +1,23 @@
 <div id="header">
     <img id="logo" src="../../../assets/logo/logo.png" alt="">
     <div id="nav">
-        <div class="nav-item active"><i class="bi bi-airplane"></i>Viagens</div>
-        <div class="nav-item"><i class="bi bi-briefcase"></i>Minhas viagens</div>
+        <div class="nav-item" [ngClass]="{'active': page == 'voos'}" (click)="changePage('voos')">
+            <i class="bi bi-airplane"></i>Viagens
+        </div>
+        <div class="nav-item" [ngClass]="{'active': page == 'userVoos'}" (click)="changePage('userVoos')">
+            <i class="bi bi-briefcase"></i>Minhas viagens
+        </div>
         <div class="nav-item profile"><i class="bi bi-person-circle"></i></div>
         <div id="menu-btn" class="nav-item menu"><i class="bi bi-list"></i></div>
     </div>
 
     <div id="nav-mobile" class="none">
-        <div class="nav-item active"><i class="bi bi-airplane"></i>Viagens</div>
-        <div class="nav-item"><i class="bi bi-briefcase"></i>Minhas viagens</div>
+        <div class="nav-item" [ngClass]="{'active': page == 'voos'}" (click)="changePage('voos')">
+            <i class="bi bi-airplane"></i>Viagens
+        </div>
+        <div class="nav-item" [ngClass]="{'active': page == 'userVoos'}" (click)="changePage('userVoos')">
+            <i class="bi bi-briefcase"></i>Minhas viagens
+        </div>
     </div>
 
 </div>

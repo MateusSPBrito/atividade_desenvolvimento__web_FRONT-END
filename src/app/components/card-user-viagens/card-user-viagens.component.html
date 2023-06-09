@@ -1,0 +1,11 @@
+<div class="user-viagem" *ngFor="let i of [1,2,3,4]; index as index"
+    [ngClass]="{'first': index == 0, 'last': index == [1,2,3,4].length - 1}">
+    <img src="../../../assets/companhias aéreas/gol.png" alt="">
+    <div class="info">
+        <p>Saída: aeroporto feira de santana</p>
+        <p>Destino: aeroporto salvador</p>
+        <p>Data: 12-12-1221</p>
+    </div>
+    <button>Detalhes</button>
+    <div class="status"><i class="bi bi-check-circle-fill"></i></div>
+</div>

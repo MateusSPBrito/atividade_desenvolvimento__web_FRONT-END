@@ -2,6 +2,11 @@
     flex-direction: column;
 }
 
+#voos{
+    display: flex;
+    flex-direction: column;
+}
+
 .lista-viagens {
     width: 75vw;
     max-width: 800px;

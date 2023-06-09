@@ -12,7 +12,7 @@ export class ViagensService {
 
   constructor(private http: HttpClient) { }
 
-  private apiUrl = 'http://localhost:3000/voo'
+  private apiUrl = 'http://192.168.1.9:3000/voo'
 
   getViagens(filter: Filter, goAndBack: boolean): Observable<any[]> {
     let url = `${this.apiUrl}?destiny=${filter.destiny}&start=${filter.start}&date=${filter.goDate}`
