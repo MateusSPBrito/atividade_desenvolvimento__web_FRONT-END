@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import Filter from 'src/app/components/filter/model';
+import Filter from '../../models/filter';
 
 @Component({
   selector: 'app-home',

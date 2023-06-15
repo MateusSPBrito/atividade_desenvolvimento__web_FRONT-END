@@ -69,42 +69,16 @@ button:hover{
 
 @media (max-width: 800px) {
     button{
-        display: none;
+        width: 90% !important;
     }
 
     .card-viagem{
-        padding: 2.5% 10%;
-    }
-}
-
-@media (max-width: 600px){
-    .card-viagem .info{
-        gap: 10px;
-        font-size: 16px;
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .card-viagem i{
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .card-viagem{
-        padding: 2.5%;
-    }
-    
-    .card-viagem img{
-        width: 10vw;
-    }
-
-    .card-viagem .info{
-        max-width: 80vw;
-        gap: 5px;
-    }
-}
-
-@media (max-width: 350px) {
-    .card-viagem .info{
-        font-size: 14px;
+    img{
+        width: 20% !important;
+        max-height: 100px;
     }
 }

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output,  } from '@angular/core';
 import { ViagensService } from 'src/app/services/viagens.service';
-import Filter from './model';
+import Filter from '../../models/filter';
 
 @Component({
   selector: 'app-filter',
@@ -11,8 +11,15 @@ export class FilterComponent {
   constructor(private service: ViagensService) { }
 
   @Output() setVoos = new EventEmitter<any>();
-  goAndBack = false
+  goAndBack = true
   filter = new Filter
+
+  // ngOnInit(){
+  //   this.filter.backDate = '2023-06-19'
+  //   this.filter.goDate = '2023-06-12'
+  //   this.filter.destiny = 'salvador'
+  //   this.filter.start = 'feira de santana'
+  // }
 
   setGoAndBack() {
     this.goAndBack = !this.goAndBack

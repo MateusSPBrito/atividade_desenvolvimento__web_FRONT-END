@@ -3,7 +3,7 @@
     justify-content: center;
 }
 
-#login {
+#login, #creat-login {
     width: 100vw;
     max-width: 400px;
     background: #fff;
@@ -13,9 +13,19 @@
     box-shadow: 1px 4px 35px -4px rgba(0, 0, 0, 0.18);
     border-radius: 0.8rem;
     flex-direction: column;
+    position: relative;
 }
 
-#circle-logo{
+.back{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--blue01);
+}
+
+.circle-logo{
     width: 20vw;
     height: 20vw;
     max-width: 100px;
@@ -31,7 +41,7 @@
     box-shadow: 1px 4px 35px -4px rgba(0, 0, 0, 0.18);
 }
 
-#circle-logo img{
+.circle-logo img{
     width: 100%;
     transform: translate(7.5%, -10%);
 }
@@ -153,7 +163,7 @@ input[type=password] {
 }
 
 .send{
-    margin: 30px auto 50px;
+    margin: 30px auto 20px;
     outline: none;
     width: 90%;
     max-width: 300px;
@@ -167,12 +177,32 @@ input[type=password] {
     color: #fff;
 }
 
+.link-creat{
+    margin-bottom: 50px;
+    cursor: pointer;
+    color: var(--blue01);
+    text-decoration: underline;
+    transition: all 0.3s;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    background-color: transparent;
+}
+
+.link-creat:hover{
+    color: red;
+}
+
 .send:hover{
     background-color: red;
 }
 
+#creat-login .send{
+    margin-bottom: 50px;
+}
+
 @media(max-width: 450px){
-    #login{
+    #login, #creat-login{
         box-shadow: none;
         height: 100%;
         background-color: #F8F6F7;
@@ -185,7 +215,7 @@ input[type=password] {
         max-width: none;
     }
 
-    #circle-logo{
+    .circle-logo{
         width: 30vw;
         height: 30vw;
         max-width: none;
@@ -195,4 +225,8 @@ input[type=password] {
     #label-check{
         margin-left: 5%;
     }
+}
+
+.none{
+    display: none !important;
 }

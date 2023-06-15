@@ -1,25 +1,64 @@
 <div class="container">
-    <div id="login">
+    <div id="login" *ngIf="op == 'login'">
 
-        <div id="circle-logo">
+        <div class="circle-logo">
             <img src="../../../assets/logo/logo.png" alt="">
         </div>
 
         <h1>Login</h1>
 
         <div class="input-container">
-            <input type="email" id="email" name="email" required placeholder="Informe seu email">
+            <input type="email" id="email" name="email" required placeholder="Informe seu email" [(ngModel)]="userLogin.username">
             <label for="email">Email</label>
         </div>
 
         <div class="input-container">
-            <input type="password" id="password" name="password" required placeholder="Informe sua senha">
+            <input type="password" id="password" name="password" required placeholder="Informe sua senha" [(ngModel)]="userLogin.password">
             <label for="password">Senha</label>
-            <i (click)="showPassword()" class="bi bi-eye-fill icon-password"></i>
+            <i (click)="showPassword('password')" class="bi bi-eye-fill icon-password i-password"></i>
         </div>
 
         <label id="label-check"><input id="box" type="checkbox" name="checkbox"><span>Lembrar de mim</span></label>
 
         <button class="send" (click)="login()">Entrar</button>
+
+        <button class="link-creat" (click)="setOp()">Não Possui conta? Cadastre-se</button>
+    </div>
+
+
+    
+    <div id="creat-login" *ngIf="op == 'creat'">
+
+        <i (click)="setOp()" class="bi bi-arrow-left-circle-fill back"></i>
+
+        <div class="circle-logo">
+            <img src="../../../assets/logo/logo.png" alt="">
+        </div>
+
+        <h1>Criar Conta</h1>
+
+        <div class="input-container">
+            <input type="text" id="creat-name" name="creat-name" required placeholder="Informe seu nome" [(ngModel)]="newUser.name">
+            <label for="creat-name">Nome</label>
+        </div>
+
+        <div class="input-container">
+            <input type="email" id="creat-email" name="creat-email" required placeholder="Informe seu email" [(ngModel)]="newUser.username">
+            <label for="creat-email">Email</label>
+        </div>
+
+        <div class="input-container">
+            <input type="password" id="creat-password" name="creat-password" required placeholder="Crie sua senha" [(ngModel)]="newUser.password">
+            <label for="creat-password">Senha</label>
+            <i (click)="showPassword('creat-password')" class="bi bi-eye-fill icon-password i-creat-password"></i>
+        </div>
+            
+        <div class="input-container">
+            <input type="password" id="creat-confirm-pass" name="creat-confirm-pass" required placeholder="Confirme sua senha" [(ngModel)]="newUser.confirmPassword">
+            <label for="creat-confirm-pass">Confirmar senha</label>
+            <i (click)="showPassword('creat-confirm-pass')" class="bi bi-eye-fill icon-password i-creat-confirm-pass"></i>
+        </div>
+
+        <button class="send" (click)="creat()">Confirmar</button>
     </div>
 </div>
