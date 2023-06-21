@@ -17,8 +17,8 @@ export class FilterComponent {
   ngOnInit(){
     this.filter.backDate = '2023-06-19'
     this.filter.goDate = '2023-06-12'
-    this.filter.destiny = 'salvador'
-    this.filter.start = 'feira de santana'
+    this.filter.destiny = 'Salvador'
+    this.filter.start = 'Feira de Santana'
 
     // this.getViagens()
   }

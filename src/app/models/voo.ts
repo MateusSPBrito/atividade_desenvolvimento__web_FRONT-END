@@ -7,7 +7,7 @@ export default class Voo {
     destinyAirport!: string;
     airline!: string;
     plane!: string;
-    Pilot!: string;
+    pilot!: string;
     time!: string;
     price!: number;
 }

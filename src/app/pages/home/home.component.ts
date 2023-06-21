@@ -38,8 +38,8 @@ export class HomeComponent {
     const goVoos: any = []
     const backVoos: any = []
     this.voos.forEach((voo: any) => {
-      if (voo.date == this.filter.goDate) goVoos.push(voo)
-      else if (voo.date == this.filter?.backDate) backVoos.push(voo)
+      if (voo.date == this.filter.goDate.split('-').reverse().join('/')) goVoos.push(voo)
+      else if (voo.date == this.filter?.backDate?.split('-').reverse().join('/')) backVoos.push(voo)
     });
     if (go) return goVoos;
     else return backVoos;

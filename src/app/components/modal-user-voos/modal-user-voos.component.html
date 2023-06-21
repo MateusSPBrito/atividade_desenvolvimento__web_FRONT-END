@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="info-card">
                     <p class="title">Origem</p>
-                    <p>{{voo.start}}</p>
+                    <p style="text-transform: capitalize;">{{voo.start}}</p>
                 </div>
 
                 <div class="info-card">
@@ -24,7 +24,7 @@
             <div class="card">
                 <div class="info-card">
                     <p class="title">Destino</p>
-                    <p>{{voo.destiny}}</p>
+                    <p style="text-transform: capitalize;">{{voo.destiny}}</p>
                 </div>
 
                 <div class="info-card">
@@ -45,8 +45,24 @@
 
             <div class="info-card">
                 <p class="title">Preço</p>
-                <p>{{voo.price}}</p>
+                <p>R${{voo.price.toFixed(2)}}</p>
             </div>
+
+            <div class="info-card">
+                <p class="title">Tempo de Voo(H)</p>
+                <p>{{voo.time}}</p>
+            </div>
+
+            <div class="info-card">
+                <p class="title">Modelo Avião</p>
+                <p>{{voo.plane}}</p>
+            </div>
+
+            <div class="info-card">
+                <p class="title">Piloto</p>
+                <p>{{voo.pilot}}</p>
+            </div>
+
 
         </div>
     </div>

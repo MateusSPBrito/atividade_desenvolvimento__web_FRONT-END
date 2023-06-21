@@ -13,9 +13,13 @@ export class ViagensService {
   private apiUrl = 'http://192.168.1.9:3000/'
 
   getViagens(filter: Filter, goAndBack: boolean): Observable<any[]> {
-    let url = `${this.apiUrl}voo?destiny=${filter.destiny}&start=${filter.start}&date=${filter.goDate}`
+    let go = filter.goDate.split('-').reverse().join('/')
+    let back
+    if(filter.backDate) back = filter.backDate.split('-').reverse().join('/')
+    // console.log(go, back)
+    let url = `${this.apiUrl}voo?destiny=${filter.destiny}&start=${filter.start}&date=${go}`
     if (goAndBack)
-      url = `${this.apiUrl}voo?destiny=${filter.destiny}&start=${filter.start}&date=${filter.goDate}&datereturn=${filter.backDate}`
+      url = `${this.apiUrl}voo?destiny=${filter.destiny}&start=${filter.start}&date=${go}&datereturn=${back}`
     return this.http.get<any[]>(url);
   }
 

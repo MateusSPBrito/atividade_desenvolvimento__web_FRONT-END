@@ -1,4 +1,4 @@
-<div *ngFor="let voo of voos; index as index" class="card-viagem"
+<div *ngFor="let voo of voos; index as index" class="card-viagem" (click)="send(index)"
     [ngClass]="{'first': index == 0, 'last': index == voos.length - 1}">
     <img src="../../../assets/companhias aéreas/{{voo.airline}}.png" alt="">
     <div class="info">
@@ -6,5 +6,9 @@
         <p>Destino: {{voo.destinyAirport}}</p>
         <p>Data: {{voo.date}}</p>
     </div>
-    <button (click)="send(index)">Comprar</button>
+    <div id="price">
+        <p class="info">A partir de</p>
+        <p><span>R$</span>{{voo.price}}</p>
+        <button>Comprar<i class="bi bi-chevron-right"></i></button>
+    </div>
 </div>
