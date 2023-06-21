@@ -1,6 +1,6 @@
 <div class="user-viagem" *ngFor="let voo of voos; index as index"
     [ngClass]="{'first': index == 0, 'last': index == voos.length - 1}">
-    <img src="../../../assets/companhias aéreas/gol.png" alt="">
+    <img src="../../../assets/companhias aéreas/{{voo.airline}}.png" alt="">
     <div class="info">
         <p>Saída: {{voo.startAirport}}</p>
         <p>Destino: {{voo.destinyAirport}}</p>

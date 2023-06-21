@@ -22,6 +22,7 @@
 
 .user-viagem img {
     width: 15%;
+    max-height: 80px;
 }
 
 .user-viagem .info {

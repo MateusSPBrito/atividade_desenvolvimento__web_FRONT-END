@@ -16,6 +16,11 @@ export class LoginComponent {
   op = 'login'
   newUser = new NewUser
   userLogin = new Login
+  check = false
+
+  ngOnInit() {
+    this.tokenLogin()
+  }
 
   setOp() {
     this.op = this.op == 'login' ? 'creat' : 'login'
@@ -41,12 +46,25 @@ export class LoginComponent {
     }
 
     this.service.login(this.userLogin).subscribe(login => {
+      if (this.check) localStorage.setItem('autoLogin', 'true')
+      else localStorage.setItem('autoLogin', 'false')
       localStorage.setItem('token', login.token.access_token)
       localStorage.setItem('user', JSON.stringify(login.user))
       window.location.href = `/home`
     }, err => {
       this.alert.error('Usuario ou senha incorretos')
     })
+  }
+
+  tokenLogin() {
+    if (localStorage.getItem('autoLogin') === 'true') {
+      this.service.tokenLogin().subscribe((login: any) => {
+        if(!login.access_token) return
+        localStorage.setItem('token', login.access_token)
+        localStorage.setItem('user', JSON.stringify(login.user))
+        window.location.href = `/home`
+      })
+    }
   }
 
   creat() {

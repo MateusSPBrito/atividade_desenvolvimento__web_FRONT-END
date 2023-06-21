@@ -18,7 +18,7 @@
             <i (click)="showPassword('password')" class="bi bi-eye-fill icon-password i-password"></i>
         </div>
 
-        <label id="label-check"><input id="box" type="checkbox" name="checkbox"><span>Lembrar de mim</span></label>
+        <label id="label-check"><input id="box" type="checkbox" name="checkbox" [(ngModel)]="check"><span>Lembrar de mim</span></label>
 
         <button class="send" (click)="login()">Entrar</button>
 

@@ -26,7 +26,6 @@ export class HttpRequesInterceptor implements HttpInterceptor {
       })
       return next.handle(dupReq);
     }
-    console.log(localStorage.getItem('token'));
     return next.handle(request);
   }
 }

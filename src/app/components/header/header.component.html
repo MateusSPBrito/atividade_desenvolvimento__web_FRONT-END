@@ -7,7 +7,7 @@
         <div class="nav-item" [ngClass]="{'active': page == 'userVoos'}" (click)="changePage('userVoos')">
             <i class="bi bi-briefcase"></i>Minhas viagens
         </div>
-        <div class="nav-item profile"><i class="bi bi-person-circle"></i></div>
+        <div class="nav-item profile" (click)="logOut()"><i class="bi bi-box-arrow-left"></i></div>
         <div id="menu-btn" class="nav-item menu"><i class="bi bi-list"></i></div>
     </div>
 

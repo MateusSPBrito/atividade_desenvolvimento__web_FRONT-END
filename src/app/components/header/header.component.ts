@@ -23,4 +23,9 @@ export class HeaderComponent {
     this.setPages.emit(page)
     document.getElementById("nav-mobile")?.classList.add('none')
   }
+
+  logOut(){
+    localStorage.clear()
+    window.location.href = `/login`
+  }
 }
