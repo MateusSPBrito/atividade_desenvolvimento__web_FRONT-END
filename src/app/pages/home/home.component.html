@@ -17,7 +17,7 @@
     <div id="user-voos" *ngIf="page == 'userVoos'">
         <div class="lista-viagens">
             <p>Minhas viagens:</p>
-            <app-card-user-viagens ></app-card-user-viagens>
+            <app-card-user-viagens [voos]="userVoos"></app-card-user-viagens>
         </div>
     </div>
 

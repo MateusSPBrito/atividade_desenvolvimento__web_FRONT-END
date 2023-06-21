@@ -11,12 +11,19 @@ import { ViagensService } from 'src/app/services/viagens.service';
 export class HomeComponent {
   constructor(private service: ViagensService) { }
   voos: any = []
+  userVoos: any = []
   filter = new Filter
   page = 'voos'
   seats: any = []
 
   showViagem = false
   voo = new Voo
+
+  ngOnInit(){
+    this.service.getUserViagens().subscribe((result)=>{
+      this.userVoos = result
+    })
+  }
 
   setPage(page: any) {
     this.page = page

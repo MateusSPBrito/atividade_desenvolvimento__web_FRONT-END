@@ -20,7 +20,7 @@ export class FilterComponent {
     this.filter.destiny = 'salvador'
     this.filter.start = 'feira de santana'
 
-    this.getViagens()
+    // this.getViagens()
   }
 
   setGoAndBack() {

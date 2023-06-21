@@ -19,12 +19,19 @@ export class ViagensService {
     return this.http.get<any[]>(url);
   }
 
+  getUserViagens() {
+    const userJson: any = window.localStorage.getItem('user')
+    const user = JSON.parse(userJson)
+    let url = `${this.apiUrl}reservation/my-reservations/${user.id}`
+    return this.http.get<any[]>(url);
+  }
+
   getSeats(vooId: any) {
     let url = `${this.apiUrl}reservation/${vooId}`
     return this.http.get<any[]>(url);
   }
 
-  newReserve(data: any){
+  newReserve(data: any) {
     let url = `${this.apiUrl}reservation/new`
     return this.http.post(url, data);
   }

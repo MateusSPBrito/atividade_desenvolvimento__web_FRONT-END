@@ -1,11 +1,14 @@
-<div class="user-viagem" *ngFor="let i of [1,2,3,4]; index as index"
-    [ngClass]="{'first': index == 0, 'last': index == [1,2,3,4].length - 1}">
+<div class="user-viagem" *ngFor="let voo of voos; index as index"
+    [ngClass]="{'first': index == 0, 'last': index == voos.length - 1}">
     <img src="../../../assets/companhias aéreas/gol.png" alt="">
     <div class="info">
-        <p>Saída: aeroporto feira de santana</p>
-        <p>Destino: aeroporto salvador</p>
-        <p>Data: 12-12-1221</p>
+        <p>Saída: {{voo.startAirport}}</p>
+        <p>Destino: {{voo.destinyAirport}}</p>
+        <p>Data: {{voo.date}}</p>
     </div>
-    <button>Detalhes</button>
-    <div class="status"><i class="bi bi-check-circle-fill"></i></div>
+    <button (click)="open(index)">Detalhes</button>
+    <!-- <div class="status"><i class="bi bi-check-circle-fill"></i></div> -->
+
+    
 </div>
+<app-modal-user-voos [voo]="selectVoo" (closeModal)="close()"></app-modal-user-voos>
