@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-cards-viagens',
@@ -7,4 +7,9 @@ import { Component, Input } from '@angular/core';
 })
 export class CardsViagensComponent {
   @Input() voos: any[] = []
+  @Output() setVoo = new EventEmitter<any>();
+
+  send(index: number){
+    this.setVoo.emit(this.voos[index])
+  }
 }

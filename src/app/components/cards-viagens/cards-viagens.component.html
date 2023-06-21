@@ -2,12 +2,9 @@
     [ngClass]="{'first': index == 0, 'last': index == voos.length - 1}">
     <img src="../../../assets/companhias aéreas/{{voo.airline}}.png" alt="">
     <div class="info">
-        <div>
-            <p>{{voo.startAirport}}</p>
-            <i class="bi bi-arrow-right"></i>
-            <p>{{voo.destinyAirport}}</p>
-        </div>
-        <p>{{voo.date}}</p>
+        <p>Saida: {{voo.startAirport}}</p>
+        <p>Destino: {{voo.destinyAirport}}</p>
+        <p>Data: {{voo.date}}</p>
     </div>
-    <button>Comprar</button>
+    <button (click)="send(index)">Comprar</button>
 </div>

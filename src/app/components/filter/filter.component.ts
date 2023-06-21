@@ -14,12 +14,14 @@ export class FilterComponent {
   goAndBack = true
   filter = new Filter
 
-  // ngOnInit(){
-  //   this.filter.backDate = '2023-06-19'
-  //   this.filter.goDate = '2023-06-12'
-  //   this.filter.destiny = 'salvador'
-  //   this.filter.start = 'feira de santana'
-  // }
+  ngOnInit(){
+    this.filter.backDate = '2023-06-19'
+    this.filter.goDate = '2023-06-12'
+    this.filter.destiny = 'salvador'
+    this.filter.start = 'feira de santana'
+
+    this.getViagens()
+  }
 
   setGoAndBack() {
     this.goAndBack = !this.goAndBack

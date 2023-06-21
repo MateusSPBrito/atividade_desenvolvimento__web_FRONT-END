@@ -1,0 +1,61 @@
+<div id="modal-container" [ngClass]="{'none': !show}">
+    <div id="modal">
+        <i class="bi bi-x-circle-fill close" (click)="close()"></i>
+        <div class="content">
+            <canvas id="myCanvas" style="background-color: #fff;" width="250" height="350"></canvas>
+
+            <div class="info">
+
+                <div class="description"><i class="bi bi-exclamation-circle-fill"></i>Na imagem, clique na cadeira em
+                    que você quer viajar!</div>
+
+                <div class="card">
+                    <div class="info-card">
+                        <p class="title">Origem</p>
+                        <p>{{voo.start}}</p>
+                    </div>
+
+                    <div class="info-card">
+                        <p class="title">Saída</p>
+                        <p>{{voo.startAirport}}</p>
+                    </div>
+
+                    <div class="info-card">
+                        <p class="title">Data partida</p>
+                        <p>{{voo.date}}</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="info-card">
+                        <p class="title">Destino</p>
+                        <p>{{voo.destiny}}</p>
+                    </div>
+
+                    <div class="info-card">
+                        <p class="title">Chegada</p>
+                        <p>{{voo.destinyAirport}}</p>
+                    </div>
+
+                    <div class="info-card">
+                        <p class="title">Data chegada</p>
+                        <p>{{voo.date}}</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <p class="title">Companhia</p>
+                    <p>{{voo.airline}}</p>
+                </div>
+
+                <div class="info-card">
+                    <p class="title">Preço</p>
+                    <p>{{voo.price}}</p>
+                </div>
+
+            </div>
+        </div>
+        <button (click)="confirm()">Fazer reserva</button>
+
+    </div>
+</div>

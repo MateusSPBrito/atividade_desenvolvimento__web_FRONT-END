@@ -5,12 +5,12 @@
         <app-filter (setVoos)="setVoos($event)"></app-filter>
         <div class="lista-viagens">
             <p>Ida:</p>
-            <app-cards-viagens [voos]="divideVoos()"></app-cards-viagens>
+            <app-cards-viagens [voos]="divideVoos()" (setVoo)="setVoo($event)"></app-cards-viagens>
         </div>
 
         <div class="lista-viagens">
             <p>Volta:</p>
-            <app-cards-viagens [voos]="divideVoos(false)"></app-cards-viagens>
+            <app-cards-viagens [voos]="divideVoos(false)" (setVoo)="setVoo($event)"></app-cards-viagens>
         </div>
     </div>
 
@@ -20,5 +20,7 @@
             <app-card-user-viagens ></app-card-user-viagens>
         </div>
     </div>
+
+    <app-modal-viagem [show]="showViagem" [seats]="seats" [voo]="voo" (closeModal)="closeModal()"></app-modal-viagem>
 
 </div>

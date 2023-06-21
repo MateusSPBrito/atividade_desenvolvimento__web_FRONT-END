@@ -11,6 +11,7 @@ import { CardsViagensComponent } from './components/cards-viagens/cards-viagens.
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CardUserViagensComponent } from './components/card-user-viagens/card-user-viagens.component';
+import { ModalViagemComponent } from './components/modal-viagem/modal-viagem.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CardUserViagensComponent } from './components/card-user-viagens/card-us
     FilterComponent,
     CardsViagensComponent,
     CardUserViagensComponent,
+    ModalViagemComponent,
   ],
   imports: [
     BrowserModule,

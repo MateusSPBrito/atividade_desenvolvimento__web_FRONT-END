@@ -10,12 +10,22 @@ export class ViagensService {
 
   constructor(private http: HttpClient) { }
 
-  private apiUrl = 'http://192.168.1.9:3000/voo'
+  private apiUrl = 'http://192.168.1.9:3000/'
 
   getViagens(filter: Filter, goAndBack: boolean): Observable<any[]> {
-    let url = `${this.apiUrl}?destiny=${filter.destiny}&start=${filter.start}&date=${filter.goDate}`
+    let url = `${this.apiUrl}voo?destiny=${filter.destiny}&start=${filter.start}&date=${filter.goDate}`
     if (goAndBack)
-      url = `${this.apiUrl}?destiny=${filter.destiny}&start=${filter.start}&date=${filter.goDate}&datereturn=${filter.backDate}`
+      url = `${this.apiUrl}voo?destiny=${filter.destiny}&start=${filter.start}&date=${filter.goDate}&datereturn=${filter.backDate}`
     return this.http.get<any[]>(url);
+  }
+
+  getSeats(vooId: any) {
+    let url = `${this.apiUrl}reservation/${vooId}`
+    return this.http.get<any[]>(url);
+  }
+
+  newReserve(data: any){
+    let url = `${this.apiUrl}reservation/new`
+    return this.http.post(url, data);
   }
 }
