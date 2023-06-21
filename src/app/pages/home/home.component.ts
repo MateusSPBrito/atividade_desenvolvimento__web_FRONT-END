@@ -19,8 +19,12 @@ export class HomeComponent {
   showViagem = false
   voo = new Voo
 
-  ngOnInit(){
-    this.service.getUserViagens().subscribe((result)=>{
+  ngOnInit() {
+    this.getUserVoos()
+  }
+
+  getUserVoos() {
+    this.service.getUserViagens().subscribe((result) => {
       this.userVoos = result
     })
   }

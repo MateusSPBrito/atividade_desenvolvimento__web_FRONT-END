@@ -4,7 +4,7 @@
             <h1>Passagens Aéreas</h1>
             <div class="op">
                 <div [ngClass]="{'active': !goAndBack}" (click)="setGoAndBack()">Só Ida</div>
-                <div [ngClass]="{'active': goAndBack}" (click)="setGoAndBack()">Ida e Volta</div>
+                <div [ngClass]="{'active': goAndBack}" (click)="setGoAndBack(true)">Ida e Volta</div>
             </div>
         </div>
 

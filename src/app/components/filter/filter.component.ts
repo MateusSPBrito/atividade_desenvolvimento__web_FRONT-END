@@ -15,16 +15,16 @@ export class FilterComponent {
   filter = new Filter
 
   ngOnInit(){
-    this.filter.backDate = '2023-06-19'
-    this.filter.goDate = '2023-06-12'
-    this.filter.destiny = 'Salvador'
-    this.filter.start = 'Feira de Santana'
+    // this.filter.backDate = '2023-06-19'
+    // this.filter.goDate = '2023-06-12'
+    // this.filter.destiny = 'Salvador'
+    // this.filter.start = 'Feira de Santana'
 
     // this.getViagens()
   }
 
-  setGoAndBack() {
-    this.goAndBack = !this.goAndBack
+  setGoAndBack(goAndBack = false) {
+    this.goAndBack = goAndBack
   }
 
   async getViagens() {

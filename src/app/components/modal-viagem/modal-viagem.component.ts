@@ -16,6 +16,7 @@ export class ModalViagemComponent {
   @Input() show = false
   @Input() voo = new Voo
   @Output() closeModal = new EventEmitter<any>();
+  @Output() getUserVoos = new EventEmitter<any>();
   reservedSeats: any = []
   cadeiraEscolhida: any
 
@@ -126,6 +127,7 @@ export class ModalViagemComponent {
 
       this.viagensService.newReserve(newReserv).subscribe(result => {
         this.close()
+        this.getUserVoos.emit()
         this.alert.success('Reserva feita com sucesso')
       })
     }
